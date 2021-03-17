@@ -53,7 +53,7 @@ public class CreateXml {
                 transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
 
                 DOMSource source = new DOMSource(newDoc);
-                StreamResult result = new StreamResult(new FileOutputStream(new File("src/collection.xml")));
+                StreamResult result = new StreamResult(new FileOutputStream(new File("output/collection.xml")));
                 transformer.transform(source, result);
             }
 
