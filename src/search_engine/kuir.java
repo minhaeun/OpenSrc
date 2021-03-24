@@ -1,5 +1,6 @@
 package search_engine;
 
+<<<<<<< HEAD
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -20,5 +21,11 @@ public class kuir {
             System.out.println("no");
         }
 
+=======
+public class kuir {
+    public static void main(String[] args){
+        makeCollection mC = new makeCollection();
+        mC.HtmltoXml();
+>>>>>>> 98d089e721270e770de4c7845abcf1a3ce7348b0
     }
 }
