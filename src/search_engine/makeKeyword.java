@@ -90,7 +90,7 @@ public class makeKeyword {
             for (int j = 0; j < kl.size(); j++){
                 Keyword kwrd = kl.get(j);
                 String str = kwrd.getString() + ":" + kwrd.getCnt() + "#";
-                tmp = tmp + str;
+                tmp += str;
             }
             data[i][1] = tmp;
            // System.out.println(tmp);
