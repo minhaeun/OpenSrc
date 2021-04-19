@@ -124,7 +124,7 @@ public class searcher {
 
     public ArrayList<Double> CalcSim() throws IOException, ClassNotFoundException {
         this.findWeight();
-        ArrayList<Double> similarity_inner = new ArrayList<>();
+        ArrayList<Double> similarity_inner = this.InnerProduct();
         ArrayList<Double> similarity_calc = new ArrayList<>();
         ArrayList<Double> similarity = new ArrayList<>();
 
