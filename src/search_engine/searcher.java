@@ -92,6 +92,36 @@ public class searcher {
 
     }
 
+
+    public ArrayList<Double> InnerProduct() throws IOException, ClassNotFoundException {
+        this.findWeight();
+        ArrayList<Double> similarity = new ArrayList<>();
+
+
+        for (int j = 1; j < 10; j += 2) {
+            double value = 0;
+            for (int i = 0; i < this.weightList.size(); i++) {
+                value += (weightList.get(i)) * (Double.parseDouble(indexList.get(i).get(j)));
+                // System.out.println("value[" + i + "] : " + value);
+
+            }
+            // System.out.println("value  : " + value);
+            similarity.add(value);
+        }
+/*
+        for(int i = 0; i < 5; i++){
+            System.out.println("similarity[" + i + "] = " + similarity.get(i));
+        }
+*/
+
+        return similarity;
+
+
+    }
+
+
+
+
     public ArrayList<Double> CalcSim() throws IOException, ClassNotFoundException {
         this.findWeight();
         ArrayList<Double> similarity_inner = new ArrayList<>();
@@ -146,6 +176,7 @@ public class searcher {
 
 
     }
+
 
     public String[][] getTitle() throws ParserConfigurationException, IOException, SAXException {
         String[][] data = new String[5][2];
