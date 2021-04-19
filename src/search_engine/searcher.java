@@ -192,7 +192,9 @@ public class searcher {
     }
 
     public void checkRank() throws IOException, ClassNotFoundException {
+
         ArrayList<Double> similarity = this.CalSim();
+
         ArrayList<Integer> rank = new ArrayList<>();
         int maxIndex = 0;
         for(int i = 0; i < 5; i++) {
