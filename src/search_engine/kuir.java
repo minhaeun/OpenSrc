@@ -17,15 +17,7 @@ public class kuir {
         } else if (args[0].equals("-i")){
             indexer indexer = new indexer("./output/" + args[1]);
             indexer.printHashmap();
-        } else if (args[0].equals("-s")){
-            String path = "./output/" + args[1];
-            if(args[2].equals("-q")) {
-                String query = args[3];
-                searcher searcher = new searcher(path, query);
-                searcher.checkRank();
-            }
         }
-
         else {
             System.out.println("no");
         }
