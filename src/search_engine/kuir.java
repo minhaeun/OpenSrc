@@ -20,6 +20,8 @@ public class kuir {
         }
         else {
             System.out.println("no");
+            searcher s = new searcher("./output/index.post" , "라면에는 면, 분말 스프가 있다.");
+            s.checkRank();
         }
 
 
