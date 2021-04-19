@@ -33,7 +33,6 @@ public class searcher {
         for(int i = 0; i < getTitle().length; i++){
             title[i] = getTitle()[i][0];
             //  System.out.println("title[" + i + "] = " + title[i]);
-
         }
 
     }
@@ -66,7 +65,6 @@ public class searcher {
             String key = iterator.next();
             ArrayList<String> value = (ArrayList) hashMap.get(key);
            // System.out.println(key + " -> " + value);
-
         }
          */
         /*
@@ -88,20 +86,17 @@ public class searcher {
             for(int j = 0; j < valueList.size(); j++){
                 System.out.println("valueList[" + i + "][" + j + "] = " + this.indexList.get(i).get(j));
             }
-
  */
         }
 
 
     }
 
-    public ArrayList<Double> CalcSim() throws IOException, ClassNotFoundException {
+    public ArrayList<Double> CalSim() throws IOException, ClassNotFoundException {
         this.findWeight();
         ArrayList<Double> similarity_inner = new ArrayList<>();
         ArrayList<Double> similarity_calc = new ArrayList<>();
         ArrayList<Double> similarity = new ArrayList<>();
-
-
 
         for (int j = 1; j < 10; j += 2) {
             double value = 0;
@@ -133,18 +128,12 @@ public class searcher {
 
         }
 
-        for(int i = 0; i < similarity_calc.size(); i++) {
+        for(int i = 0; i < similarity_calc.size(); i++){
             double value = 0;
-            if (similarity_calc.get(i) == 0)
+            if(similarity_calc.get(i) == 0)
                 value = 0;
             else
                 value = similarity_inner.get(i) / similarity_calc.get(i);
-
-            // System.out.println("value[" + i + "] : " + value);
-
-
-            // System.out.println("value  : " + value);
-
             similarity.add(value);
         }
 /*
@@ -152,7 +141,6 @@ public class searcher {
             System.out.println("similarity[" + i + "] = " + similarity.get(i));
         }
  */
-
 
         return similarity;
 
@@ -204,7 +192,7 @@ public class searcher {
     }
 
     public void checkRank() throws IOException, ClassNotFoundException {
-        ArrayList<Double> similarity = this.CalcSim();
+        ArrayList<Double> similarity = this.CalSim();
         ArrayList<Integer> rank = new ArrayList<>();
         int maxIndex = 0;
         for(int i = 0; i < 5; i++) {
@@ -216,7 +204,6 @@ public class searcher {
         for(int i = 0; i < 5; i++){
             System.out.println(rank.get(i));
         }
-
  */
         for(int i = 0; i < 3; i++){
             System.out.println((i +1) + "등 : " + this.title[rank.get(i)]);
@@ -225,4 +212,3 @@ public class searcher {
     }
 
 }
-
