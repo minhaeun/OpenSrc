@@ -32,7 +32,7 @@ public class searcher {
 
         for(int i = 0; i < getTitle().length; i++){
             title[i] = getTitle()[i][0];
-          //  System.out.println("title[" + i + "] = " + title[i]);
+            //  System.out.println("title[" + i + "] = " + title[i]);
         }
 
     }
@@ -65,7 +65,6 @@ public class searcher {
             String key = iterator.next();
             ArrayList<String> value = (ArrayList) hashMap.get(key);
            // System.out.println(key + " -> " + value);
-
         }
          */
         /*
@@ -87,14 +86,13 @@ public class searcher {
             for(int j = 0; j < valueList.size(); j++){
                 System.out.println("valueList[" + i + "][" + j + "] = " + this.indexList.get(i).get(j));
             }
-
  */
         }
 
 
     }
 
-    public ArrayList<Double> InnerProduct() throws IOException, ClassNotFoundException {
+    public ArrayList<Double> CalcSim() throws IOException, ClassNotFoundException {
         this.findWeight();
         ArrayList<Double> similarity = new ArrayList<>();
 
@@ -103,10 +101,10 @@ public class searcher {
             double value = 0;
             for (int i = 0; i < this.weightList.size(); i++) {
                 value += (weightList.get(i)) * (Double.parseDouble(indexList.get(i).get(j)));
-               // System.out.println("value[" + i + "] : " + value);
+                // System.out.println("value[" + i + "] : " + value);
 
             }
-           // System.out.println("value  : " + value);
+            // System.out.println("value  : " + value);
             similarity.add(value);
         }
 /*
@@ -177,7 +175,6 @@ public class searcher {
         for(int i = 0; i < 5; i++){
             System.out.println(rank.get(i));
         }
-
  */
         for(int i = 0; i < 3; i++){
             System.out.println((i +1) + "등 : " + this.title[rank.get(i)]);
@@ -186,4 +183,3 @@ public class searcher {
     }
 
 }
-
