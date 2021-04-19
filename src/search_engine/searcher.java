@@ -94,7 +94,7 @@ public class searcher {
 
     }
 
-    public ArrayList<Double> CalSim() throws IOException, ClassNotFoundException {
+    public ArrayList<Double> InnerProduct() throws IOException, ClassNotFoundException {
         this.findWeight();
         ArrayList<Double> similarity = new ArrayList<>();
 
@@ -165,7 +165,7 @@ public class searcher {
     }
 
     public void checkRank() throws IOException, ClassNotFoundException {
-        ArrayList<Double> similarity = this.CalSim();
+        ArrayList<Double> similarity = this.CalcSim();
         ArrayList<Integer> rank = new ArrayList<>();
         int maxIndex = 0;
         for(int i = 0; i < 5; i++) {
