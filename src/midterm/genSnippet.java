@@ -1,9 +1,7 @@
 package midterm;
 
-import search_engine.searcher;
-
 import java.io.File;
-import java.lang.reflect.Array;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,10 +15,16 @@ public class genSnippet {
         this.query = query;
     }
 
-    public void readFile() {
-        ArrayList<String[]> all = new ArrayList<>();
+    public void readFile() throws FileNotFoundException {
+        ArrayList<String[]> totalList = new ArrayList<>();
         File file = new File(path);
-        String text = file.toString();
+        Scanner scan = new Scanner(file);
+
+        while(scan.hasNextLine()) {
+            String line = scan.nextLine();
+            totalList.add(line.split(" "));
+        }
+
 
     }
 
@@ -34,7 +38,7 @@ public class genSnippet {
 
     }
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws FileNotFoundException {
         if (args[0].equals("-f")) {
             String path = args[1];
         }
