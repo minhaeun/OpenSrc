@@ -54,6 +54,8 @@ cmake-build-*/
 # IntelliJ
 out/
 .idea/
+output/
+src/lib
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -194,6 +196,6 @@ fabric.properties
 *.iml
 modules.xml
 .idea/misc.xml
-*.ipr
+*.ipr여기
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij+iml# End of https://www.toptal.com/developers/gitignore/api/intellij
